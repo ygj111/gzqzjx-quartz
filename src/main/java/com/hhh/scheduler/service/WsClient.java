@@ -82,7 +82,7 @@ public class WsClient extends WebServiceGatewaySupport{
 		JAXBElement<QueryProjectForPageResponse> response = invokeProjectWs(request);
 		ProjectForPage page = response.getValue().getReturn();
 		System.out.println("projectCount:"+page.getPageCount());
-		Integer pageNum = page.getPageCount()/pageSize;//总页数
+		int pageNum = (int)Math.ceil((double)page.getPageCount() / pageSize);//总页数
 		while(thisPage<=pageNum){
 			request.setThisPage(thisPage);
 			JAXBElement<QueryProjectForPageResponse> response2 = invokeProjectWs(request);

@@ -48,7 +48,6 @@ public class QuartzConfiguration {
 //        factory.setDataSource(dataSource);
         factory.setJobFactory(jobFactory);
 //        factory.setTriggers(sampleJobTrigger);
-
         return factory;
     }
 
