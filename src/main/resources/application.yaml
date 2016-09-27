@@ -1,0 +1,20 @@
+datasource:
+  driver: oracle.jdbc.driver.OracleDriver
+  url: jdbc:oracle:thin:@192.169.0.202:1521:hhh
+  user: hhh_gzqzjx
+  password: hhh
+  maxActive: 20
+  initialSize: 5
+  maxWait: 3000
+  minIdle: 2
+  timeBetweenEvictionRunsMillis: 3000
+  validationQuery: select 1 from dual
+  testWhileIdle: true
+  slowSQLMills: 3000
+  logSlowSql: true
+ 
+spring:
+  jpa:
+    generate-ddl: true
+    naming-strategy: org.hibernate.dialect.MySQL5Dialect
+    show-sql: false
