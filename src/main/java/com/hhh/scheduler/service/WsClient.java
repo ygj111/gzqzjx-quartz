@@ -143,10 +143,19 @@ public class WsClient extends WebServiceGatewaySupport{
 			basEtp = new BasEtp();
 			basEtp.setEtpId(ub.getId());
 			basEtp.setCustomerId(ub.getUnitid());
-			basEtp.setUnitcode(ub.getUnitname());
-			basEtp.setName(ub.getContacts());
-			basEtp.setLxr(ub.getUnittype());
-			basEtpRepository.save(basEtp);
+			basEtp.setUnitcode(ub.getUnitid());
+			basEtp.setName(ub.getUnitname());
+			basEtp.setLxr(ub.getContacts());
+			if(ub.getUnittype().equals("7")){
+				basEtp.setType("CT6");
+				basEtpRepository.save(basEtp);
+			}else if(ub.getUnittype().equals("8")){
+				basEtp.setType("4");
+				basEtpRepository.save(basEtp);
+			}else if(ub.getUnittype().equals("10")){
+				basEtp.setType("6");
+				basEtpRepository.save(basEtp);
+			}
 		}
 		return response;
 	}
@@ -168,33 +177,35 @@ public class WsClient extends WebServiceGatewaySupport{
 		PUserRole pur = null;
 		PUserRolePK purPk = null;
 		for(UnitUserBean bean : list){
-			ua = new UserAuth();
-			ua.setPersonId(bean.getUsername());
-			ua.setUserName(bean.getUsername());
-			ua.setPassword(bean.getPassword());
-			Timestamp updateDate=null;
-			try {
-				if(bean.getUpdatedate()!=null){
-					updateDate = new Timestamp(convertToDate(bean.getUpdatedate()).getTime());
+			if(bean.getUsertype().equals("14")||bean.getUsertype().equals("22")||bean.getUsertype().equals("30")){
+				ua = new UserAuth();
+				ua.setPersonId(bean.getUsername());
+				ua.setUserName(bean.getUsername());
+				ua.setPassword(bean.getPassword());
+				Timestamp updateDate=null;
+				try {
+					if(bean.getUpdatedate()!=null){
+						updateDate = new Timestamp(convertToDate(bean.getUpdatedate()).getTime());
+					}
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				ua.setVcdjrq(updateDate);
+				ua.setState("Y");
+				ua.setUsertype("units");
+				ua.setUnitsid(bean.getUnitid());
+				ua.setUserid(bean.getUserid());
+				userAuthRepository.save(ua);
+				
+				pur = new PUserRole();
+				purPk = new PUserRolePK();
+				purPk.setPersonId(bean.getUsername());
+				purPk.setRoleId(68);
+				pur.setId(purPk);
+				pur.setId2(new BigDecimal(0));
+				pUserRoleRepository.save(pur);
 			}
-			ua.setVcdjrq(updateDate);
-			ua.setState("Y");
-			ua.setUsertype("units");
-			ua.setUnitsid(bean.getUnitid());
-			ua.setUserid(bean.getUserid());
-			userAuthRepository.save(ua);
-			
-			pur = new PUserRole();
-			purPk = new PUserRolePK();
-			purPk.setPersonId(bean.getUsername());
-			purPk.setRoleId(68);
-			pur.setId(purPk);
-			pur.setId2(new BigDecimal(0));
-			pUserRoleRepository.save(pur);
 		}
 		return response;
 	}
