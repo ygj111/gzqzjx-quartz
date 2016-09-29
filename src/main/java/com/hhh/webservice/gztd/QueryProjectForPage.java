@@ -1,8 +1,8 @@
 //
-// ���ļ����� JavaTM Architecture for XML Binding (JAXB) ����ʵ�� v2.2.11 ��ɵ�
-// ����� <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �����±���Դģʽʱ, �Դ��ļ��������޸Ķ�����ʧ��
-// ���ʱ��: 2016.09.19 ʱ�� 03:02:38 PM CST 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2016.09.29 时间 03:37:25 PM CST 
 //
 
 
@@ -11,14 +11,13 @@ package com.hhh.webservice.gztd;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>QueryProjectForPage complex type�� Java �ࡣ
+ * <p>QueryProjectForPage complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�����ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="QueryProjectForPage"&gt;
@@ -50,7 +49,6 @@ import javax.xml.bind.annotation.XmlType;
     "thisPage",
     "pageSize"
 })
-@XmlRootElement(name = "QueryProjectForPage")
 public class QueryProjectForPage {
 
     @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
@@ -69,7 +67,7 @@ public class QueryProjectForPage {
     protected int pageSize;
 
     /**
-     * ��ȡprojectName���Ե�ֵ��
+     * 获取projectName属性的值。
      * 
      * @return
      *     possible object is
@@ -81,7 +79,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ����projectName���Ե�ֵ��
+     * 设置projectName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -93,7 +91,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ��ȡregNo���Ե�ֵ��
+     * 获取regNo属性的值。
      * 
      * @return
      *     possible object is
@@ -105,7 +103,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ����regNo���Ե�ֵ��
+     * 设置regNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -117,7 +115,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ��ȡscale���Ե�ֵ��
+     * 获取scale属性的值。
      * 
      * @return
      *     possible object is
@@ -129,7 +127,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ����scale���Ե�ֵ��
+     * 设置scale属性的值。
      * 
      * @param value
      *     allowed object is
@@ -141,7 +139,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ��ȡstartDate���Ե�ֵ��
+     * 获取startDate属性的值。
      * 
      * @return
      *     possible object is
@@ -153,7 +151,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ����startDate���Ե�ֵ��
+     * 设置startDate属性的值。
      * 
      * @param value
      *     allowed object is
@@ -165,7 +163,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ��ȡendDate���Ե�ֵ��
+     * 获取endDate属性的值。
      * 
      * @return
      *     possible object is
@@ -177,7 +175,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ����endDate���Ե�ֵ��
+     * 设置endDate属性的值。
      * 
      * @param value
      *     allowed object is
@@ -189,7 +187,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ��ȡthisPage���Ե�ֵ��
+     * 获取thisPage属性的值。
      * 
      */
     public int getThisPage() {
@@ -197,7 +195,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ����thisPage���Ե�ֵ��
+     * 设置thisPage属性的值。
      * 
      */
     public void setThisPage(int value) {
@@ -205,7 +203,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ��ȡpageSize���Ե�ֵ��
+     * 获取pageSize属性的值。
      * 
      */
     public int getPageSize() {
@@ -213,7 +211,7 @@ public class QueryProjectForPage {
     }
 
     /**
-     * ����pageSize���Ե�ֵ��
+     * 设置pageSize属性的值。
      * 
      */
     public void setPageSize(int value) {

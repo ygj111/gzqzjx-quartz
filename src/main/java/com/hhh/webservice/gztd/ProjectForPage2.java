@@ -17,16 +17,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>queryDogKeyByNOResponse complex type的 Java 类。
+ * <p>projectForPage2 complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="queryDogKeyByNOResponse"&gt;
+ * &lt;complexType name="projectForPage2"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="return" type="{http://webservice.system.platform.hhh.com/}dogKeyBean" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="pageCount" type="{http://www.w3.org/2001/XMLSchema}int" form="unqualified"/&gt;
+ *         &lt;element name="projectBean" type="{http://webservice.system.platform.hhh.com/}projectBean2" maxOccurs="unbounded" minOccurs="0" form="unqualified"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,41 +37,59 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "queryDogKeyByNOResponse", propOrder = {
-    "_return"
+@XmlType(name = "projectForPage2", propOrder = {
+    "pageCount",
+    "projectBean"
 })
-public class QueryDogKeyByNOResponse {
+public class ProjectForPage2 {
 
-    @XmlElement(name = "return", namespace = "http://webservice.system.platform.hhh.com/")
-    protected List<DogKeyBean> _return;
+    protected int pageCount;
+    @XmlElement(nillable = true)
+    protected List<ProjectBean2> projectBean;
 
     /**
-     * Gets the value of the return property.
+     * 获取pageCount属性的值。
+     * 
+     */
+    public int getPageCount() {
+        return pageCount;
+    }
+
+    /**
+     * 设置pageCount属性的值。
+     * 
+     */
+    public void setPageCount(int value) {
+        this.pageCount = value;
+    }
+
+    /**
+     * Gets the value of the projectBean property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the return property.
+     * This is why there is not a <CODE>set</CODE> method for the projectBean property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getReturn().add(newItem);
+     *    getProjectBean().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link DogKeyBean }
+     * {@link ProjectBean2 }
      * 
      * 
      */
-    public List<DogKeyBean> getReturn() {
-        if (_return == null) {
-            _return = new ArrayList<DogKeyBean>();
+    public List<ProjectBean2> getProjectBean() {
+        if (projectBean == null) {
+            projectBean = new ArrayList<ProjectBean2>();
         }
-        return this._return;
+        return this.projectBean;
     }
 
 }

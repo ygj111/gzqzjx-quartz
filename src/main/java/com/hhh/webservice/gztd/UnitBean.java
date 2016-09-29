@@ -1,8 +1,8 @@
 //
-// ´ËÎÄ¼şÊÇÓÉ JavaTM Architecture for XML Binding (JAXB) ÒıÓÃÊµÏÖ v2.2.11 Éú³ÉµÄ
-// Çë·ÃÎÊ <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// ÔÚÖØĞÂ±àÒëÔ´Ä£Ê½Ê±, ¶Ô´ËÎÄ¼şµÄËùÓĞĞŞ¸Ä¶¼½«¶ªÊ§¡£
-// Éú³ÉÊ±¼ä: 2016.09.19 Ê±¼ä 03:02:38 PM CST 
+// æ­¤æ–‡ä»¶æ˜¯ç”± JavaTM Architecture for XML Binding (JAXB) å¼•ç”¨å®ç° v2.2.11 ç”Ÿæˆçš„
+// è¯·è®¿é—® <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// åœ¨é‡æ–°ç¼–è¯‘æºæ¨¡å¼æ—¶, å¯¹æ­¤æ–‡ä»¶çš„æ‰€æœ‰ä¿®æ”¹éƒ½å°†ä¸¢å¤±ã€‚
+// ç”Ÿæˆæ—¶é—´: 2016.09.29 æ—¶é—´ 03:37:25 PM CST 
 //
 
 
@@ -16,9 +16,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>unitBean complex typeµÄ Java Àà¡£
+ * <p>unitBean complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="unitBean"&gt;
@@ -68,7 +68,7 @@ public class UnitBean {
     protected XMLGregorianCalendar updatedate;
 
     /**
-     * »ñÈ¡contactsÊôĞÔµÄÖµ¡£
+     * è·å–contactså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class UnitBean {
     }
 
     /**
-     * ÉèÖÃcontactsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®contactså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -92,7 +92,7 @@ public class UnitBean {
     }
 
     /**
-     * »ñÈ¡contactstelÊôĞÔµÄÖµ¡£
+     * è·å–contactstelå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -104,7 +104,7 @@ public class UnitBean {
     }
 
     /**
-     * ÉèÖÃcontactstelÊôĞÔµÄÖµ¡£
+     * è®¾ç½®contactstelå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -116,7 +116,7 @@ public class UnitBean {
     }
 
     /**
-     * »ñÈ¡gradeÊôĞÔµÄÖµ¡£
+     * è·å–gradeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -128,7 +128,7 @@ public class UnitBean {
     }
 
     /**
-     * ÉèÖÃgradeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®gradeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -140,7 +140,7 @@ public class UnitBean {
     }
 
     /**
-     * »ñÈ¡gradenoÊôĞÔµÄÖµ¡£
+     * è·å–gradenoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -152,7 +152,7 @@ public class UnitBean {
     }
 
     /**
-     * ÉèÖÃgradenoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®gradenoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -164,7 +164,7 @@ public class UnitBean {
     }
 
     /**
-     * »ñÈ¡idÊôĞÔµÄÖµ¡£
+     * è·å–idå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -176,7 +176,7 @@ public class UnitBean {
     }
 
     /**
-     * ÉèÖÃidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®idå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -188,7 +188,7 @@ public class UnitBean {
     }
 
     /**
-     * »ñÈ¡unitidÊôĞÔµÄÖµ¡£
+     * è·å–unitidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -200,7 +200,7 @@ public class UnitBean {
     }
 
     /**
-     * ÉèÖÃunitidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®unitidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -212,7 +212,7 @@ public class UnitBean {
     }
 
     /**
-     * »ñÈ¡unitnameÊôĞÔµÄÖµ¡£
+     * è·å–unitnameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -224,7 +224,7 @@ public class UnitBean {
     }
 
     /**
-     * ÉèÖÃunitnameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®unitnameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -236,7 +236,7 @@ public class UnitBean {
     }
 
     /**
-     * »ñÈ¡unittypeÊôĞÔµÄÖµ¡£
+     * è·å–unittypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -248,7 +248,7 @@ public class UnitBean {
     }
 
     /**
-     * ÉèÖÃunittypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®unittypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -260,7 +260,7 @@ public class UnitBean {
     }
 
     /**
-     * »ñÈ¡updatedateÊôĞÔµÄÖµ¡£
+     * è·å–updatedateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -272,7 +272,7 @@ public class UnitBean {
     }
 
     /**
-     * ÉèÖÃupdatedateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®updatedateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

@@ -15,16 +15,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>queryDogKeyByNO complex type的 Java 类。
+ * <p>queryProjectByUserName complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="queryDogKeyByNO"&gt;
+ * &lt;complexType name="queryProjectByUserName"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="dogkey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="userName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="versionID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -34,36 +35,63 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "queryDogKeyByNO", propOrder = {
-    "dogkey"
+@XmlType(name = "queryProjectByUserName", propOrder = {
+    "userName",
+    "versionID"
 })
-public class QueryDogKeyByNO {
+public class QueryProjectByUserName {
 
     @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
-    protected String dogkey;
+    protected String userName;
+    @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
+    protected String versionID;
 
     /**
-     * 获取dogkey属性的值。
+     * 获取userName属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDogkey() {
-        return dogkey;
+    public String getUserName() {
+        return userName;
     }
 
     /**
-     * 设置dogkey属性的值。
+     * 设置userName属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDogkey(String value) {
-        this.dogkey = value;
+    public void setUserName(String value) {
+        this.userName = value;
+    }
+
+    /**
+     * 获取versionID属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getVersionID() {
+        return versionID;
+    }
+
+    /**
+     * 设置versionID属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setVersionID(String value) {
+        this.versionID = value;
     }
 
 }

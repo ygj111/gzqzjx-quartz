@@ -15,16 +15,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>queryDogKeyByNO complex type的 Java 类。
+ * <p>checkLogin2 complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="queryDogKeyByNO"&gt;
+ * &lt;complexType name="checkLogin2"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="dogkey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="loginCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -34,36 +34,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "queryDogKeyByNO", propOrder = {
-    "dogkey"
+@XmlType(name = "checkLogin2", propOrder = {
+    "loginCode"
 })
-public class QueryDogKeyByNO {
+public class CheckLogin2 {
 
     @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
-    protected String dogkey;
+    protected String loginCode;
 
     /**
-     * 获取dogkey属性的值。
+     * 获取loginCode属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDogkey() {
-        return dogkey;
+    public String getLoginCode() {
+        return loginCode;
     }
 
     /**
-     * 设置dogkey属性的值。
+     * 设置loginCode属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDogkey(String value) {
-        this.dogkey = value;
+    public void setLoginCode(String value) {
+        this.loginCode = value;
     }
 
 }

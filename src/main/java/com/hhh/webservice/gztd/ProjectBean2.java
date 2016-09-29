@@ -17,12 +17,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>projectBean complex type的 Java 类。
+ * <p>projectBean2 complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="projectBean"&gt;
+ * &lt;complexType name="projectBean2"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
@@ -32,12 +32,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="begindate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="btel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="builder" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
+ *         &lt;element name="builderID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="constructioner" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
+ *         &lt;element name="constructionerID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="ctel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="depth" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="deptid" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="deptname" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="designer" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
+ *         &lt;element name="designerID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="dtel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="enddate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="gdDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0" form="unqualified"/&gt;
@@ -55,10 +58,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="projectnum_zl" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="projectstatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="researcher" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
+ *         &lt;element name="researcherID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="rtel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="sgxkzh" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="stel" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="supervisor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
+ *         &lt;element name="supervisorID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="updatedate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0" form="unqualified"/&gt;
  *         &lt;element name="versionId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0" form="unqualified"/&gt;
  *       &lt;/sequence&gt;
@@ -70,19 +75,22 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "projectBean", propOrder = {
+@XmlType(name = "projectBean2", propOrder = {
     "address",
     "area",
     "areaCode",
     "begindate",
     "btel",
     "builder",
+    "builderID",
     "constructioner",
+    "constructionerID",
     "ctel",
     "depth",
     "deptid",
     "deptname",
     "designer",
+    "designerID",
     "dtel",
     "enddate",
     "gdDate",
@@ -100,14 +108,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "projectnumZl",
     "projectstatus",
     "researcher",
+    "researcherID",
     "rtel",
     "sgxkzh",
     "stel",
     "supervisor",
+    "supervisorID",
     "updatedate",
     "versionId"
 })
-public class ProjectBean {
+public class ProjectBean2 {
 
     protected String address;
     protected Double area;
@@ -116,12 +126,15 @@ public class ProjectBean {
     protected XMLGregorianCalendar begindate;
     protected String btel;
     protected String builder;
+    protected String builderID;
     protected String constructioner;
+    protected String constructionerID;
     protected String ctel;
     protected Double depth;
     protected String deptid;
     protected String deptname;
     protected String designer;
+    protected String designerID;
     protected String dtel;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar enddate;
@@ -142,10 +155,12 @@ public class ProjectBean {
     protected String projectnumZl;
     protected String projectstatus;
     protected String researcher;
+    protected String researcherID;
     protected String rtel;
     protected String sgxkzh;
     protected String stel;
     protected String supervisor;
+    protected String supervisorID;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar updatedate;
     protected String versionId;
@@ -295,6 +310,30 @@ public class ProjectBean {
     }
 
     /**
+     * 获取builderID属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getBuilderID() {
+        return builderID;
+    }
+
+    /**
+     * 设置builderID属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setBuilderID(String value) {
+        this.builderID = value;
+    }
+
+    /**
      * 获取constructioner属性的值。
      * 
      * @return
@@ -316,6 +355,30 @@ public class ProjectBean {
      */
     public void setConstructioner(String value) {
         this.constructioner = value;
+    }
+
+    /**
+     * 获取constructionerID属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getConstructionerID() {
+        return constructionerID;
+    }
+
+    /**
+     * 设置constructionerID属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setConstructionerID(String value) {
+        this.constructionerID = value;
     }
 
     /**
@@ -436,6 +499,30 @@ public class ProjectBean {
      */
     public void setDesigner(String value) {
         this.designer = value;
+    }
+
+    /**
+     * 获取designerID属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDesignerID() {
+        return designerID;
+    }
+
+    /**
+     * 设置designerID属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDesignerID(String value) {
+        this.designerID = value;
     }
 
     /**
@@ -847,6 +934,30 @@ public class ProjectBean {
     }
 
     /**
+     * 获取researcherID属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getResearcherID() {
+        return researcherID;
+    }
+
+    /**
+     * 设置researcherID属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setResearcherID(String value) {
+        this.researcherID = value;
+    }
+
+    /**
      * 获取rtel属性的值。
      * 
      * @return
@@ -940,6 +1051,30 @@ public class ProjectBean {
      */
     public void setSupervisor(String value) {
         this.supervisor = value;
+    }
+
+    /**
+     * 获取supervisorID属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSupervisorID() {
+        return supervisorID;
+    }
+
+    /**
+     * 设置supervisorID属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSupervisorID(String value) {
+        this.supervisorID = value;
     }
 
     /**

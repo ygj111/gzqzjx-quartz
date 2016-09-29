@@ -11,16 +11,17 @@ package com.hhh.webservice.gztd;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>QueryProjectForHNT complex type的 Java 类。
+ * <p>QueryProjectForPageToTD complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="QueryProjectForHNT"&gt;
+ * &lt;complexType name="QueryProjectForPageToTD"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
@@ -29,6 +30,8 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="scale" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="startDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="endDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="thisPage" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="pageSize" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,14 +41,17 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "QueryProjectForHNT", propOrder = {
+@XmlType(name = "QueryProjectForPageToTD", propOrder = {
     "projectName",
     "regNo",
     "scale",
     "startDate",
-    "endDate"
+    "endDate",
+    "thisPage",
+    "pageSize"
 })
-public class QueryProjectForHNT {
+@XmlRootElement(name = "QueryProjectForPageToTD")
+public class QueryProjectForPageToTD {
 
     @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
     protected String projectName;
@@ -57,6 +63,10 @@ public class QueryProjectForHNT {
     protected String startDate;
     @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
     protected String endDate;
+    @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
+    protected int thisPage;
+    @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
+    protected int pageSize;
 
     /**
      * 获取projectName属性的值。
@@ -176,6 +186,38 @@ public class QueryProjectForHNT {
      */
     public void setEndDate(String value) {
         this.endDate = value;
+    }
+
+    /**
+     * 获取thisPage属性的值。
+     * 
+     */
+    public int getThisPage() {
+        return thisPage;
+    }
+
+    /**
+     * 设置thisPage属性的值。
+     * 
+     */
+    public void setThisPage(int value) {
+        this.thisPage = value;
+    }
+
+    /**
+     * 获取pageSize属性的值。
+     * 
+     */
+    public int getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * 设置pageSize属性的值。
+     * 
+     */
+    public void setPageSize(int value) {
+        this.pageSize = value;
     }
 
 }

@@ -15,16 +15,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>queryDogKeyByNO complex type的 Java 类。
+ * <p>checkKqByProjectCodeResponse complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="queryDogKeyByNO"&gt;
+ * &lt;complexType name="checkKqByProjectCodeResponse"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="dogkey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -34,36 +34,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "queryDogKeyByNO", propOrder = {
-    "dogkey"
+@XmlType(name = "checkKqByProjectCodeResponse", propOrder = {
+    "_return"
 })
-public class QueryDogKeyByNO {
+public class CheckKqByProjectCodeResponse {
 
-    @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
-    protected String dogkey;
+    @XmlElement(name = "return", namespace = "http://webservice.system.platform.hhh.com/")
+    protected String _return;
 
     /**
-     * 获取dogkey属性的值。
+     * 获取return属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDogkey() {
-        return dogkey;
+    public String getReturn() {
+        return _return;
     }
 
     /**
-     * 设置dogkey属性的值。
+     * 设置return属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDogkey(String value) {
-        this.dogkey = value;
+    public void setReturn(String value) {
+        this._return = value;
     }
 
 }

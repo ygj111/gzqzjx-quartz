@@ -252,8 +252,8 @@ public class BasEtp implements Serializable {
 	@Column(length=30)
 	private String shiyanshizrtel;
 
-	@Column(length=20)
-	private String status;
+	@Column(length=20,updatable=false)
+	private String status="0";
 
 	@Column(length=20)
 	private String stock;

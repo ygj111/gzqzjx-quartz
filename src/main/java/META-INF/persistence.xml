@@ -7,5 +7,7 @@
 		<class>com.hhh.scheduler.domain.PUserRole</class>
 		<class>com.hhh.scheduler.domain.PUserRolePK</class>
 		<class>com.hhh.scheduler.domain.UserAuth</class>
+		<class>com.hhh.scheduler.domain.BasLinkGcetp</class>
+		<class>com.hhh.scheduler.domain.BasLinkGcetpPK</class>
 	</persistence-unit>
 </persistence>

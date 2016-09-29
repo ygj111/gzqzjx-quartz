@@ -19,15 +19,18 @@ import com.hhh.scheduler.domain.BasEtp;
 import com.hhh.scheduler.domain.BasEtpRepository;
 import com.hhh.scheduler.domain.BasGc;
 import com.hhh.scheduler.domain.BasGcRepository;
+import com.hhh.scheduler.domain.BasLinkGcetp;
+import com.hhh.scheduler.domain.BasLinkGcetpPK;
+import com.hhh.scheduler.domain.BasLinkGcetpRepository;
 import com.hhh.scheduler.domain.PUserRole;
 import com.hhh.scheduler.domain.PUserRolePK;
 import com.hhh.scheduler.domain.PUserRoleRepository;
 import com.hhh.scheduler.domain.UserAuth;
 import com.hhh.scheduler.domain.UserAuthRepository;
-import com.hhh.webservice.gztd.ProjectBean;
-import com.hhh.webservice.gztd.ProjectForPage;
-import com.hhh.webservice.gztd.QueryProjectForPage;
-import com.hhh.webservice.gztd.QueryProjectForPageResponse;
+import com.hhh.webservice.gztd.ProjectBean2;
+import com.hhh.webservice.gztd.ProjectForPage2;
+import com.hhh.webservice.gztd.QueryProjectForPageToTD;
+import com.hhh.webservice.gztd.QueryProjectForPageToTDResponse;
 import com.hhh.webservice.gztd.QueryUnitList;
 import com.hhh.webservice.gztd.QueryUnitListResponse;
 import com.hhh.webservice.gztd.QueryUnitUserList;
@@ -46,6 +49,8 @@ public class WsClient extends WebServiceGatewaySupport{
 	private UserAuthRepository userAuthRepository;
 	@Autowired
 	private PUserRoleRepository pUserRoleRepository;
+	@Autowired
+	private BasLinkGcetpRepository basLinkGcetpRepository;
 	
 	public  Date convertToDate(XMLGregorianCalendar cal) throws Exception{
         GregorianCalendar ca = cal.toGregorianCalendar();
@@ -57,10 +62,10 @@ public class WsClient extends WebServiceGatewaySupport{
 	 * @param request
 	 * @return
 	 */
-	public JAXBElement<QueryProjectForPageResponse> invokeProjectWs(QueryProjectForPage request){
-		JAXBElement<QueryProjectForPageResponse> response = (JAXBElement<QueryProjectForPageResponse>) getWebServiceTemplate()
-				.marshalSendAndReceive("http://218.204.110.136:9000/webservice/platformService",request,
-						new SoapActionCallback("http://218.204.110.136:9000/webservice/QueryProjectForPage"));
+	public JAXBElement<QueryProjectForPageToTDResponse> invokeProjectWs(QueryProjectForPageToTD request){
+		JAXBElement<QueryProjectForPageToTDResponse> response = (JAXBElement<QueryProjectForPageToTDResponse>) getWebServiceTemplate()
+				.marshalSendAndReceive("http://192.168.3.64:8000/webservice/platformService",request,
+						new SoapActionCallback("http://192.168.3.64:8000/webservice/QueryProjectForPageToTD"));
 		return response;
 	}
 	
@@ -73,23 +78,26 @@ public class WsClient extends WebServiceGatewaySupport{
 		String updateEndDate = "2016-06-01";//更新结束日期
 		Integer thisPage = 1;//当前页数
 		Integer pageSize = 10;//每页显示数
-		QueryProjectForPage request = new QueryProjectForPage();
+		QueryProjectForPageToTD request = new QueryProjectForPageToTD();
 		request.setStartDate(updateStartDate);
 		request.setEndDate(updateEndDate);
 		request.setThisPage(thisPage);
 		request.setPageSize(pageSize);
 
-		JAXBElement<QueryProjectForPageResponse> response = invokeProjectWs(request);
-		ProjectForPage page = response.getValue().getReturn();
+		JAXBElement<QueryProjectForPageToTDResponse> response = invokeProjectWs(request);
+		ProjectForPage2 page = response.getValue().getReturn();
 		System.out.println("projectCount:"+page.getPageCount());
 		int pageNum = (int)Math.ceil((double)page.getPageCount() / pageSize);//总页数
 		while(thisPage<=pageNum){
 			request.setThisPage(thisPage);
-			JAXBElement<QueryProjectForPageResponse> response2 = invokeProjectWs(request);
-			ProjectForPage page2 = response2.getValue().getReturn();
-			List<ProjectBean> projectList = page2.getProjectBean();
+			JAXBElement<QueryProjectForPageToTDResponse> response2 = invokeProjectWs(request);
+			ProjectForPage2 page2 = response2.getValue().getReturn();
+			List<ProjectBean2> projectList = page2.getProjectBean();
 			BasGc basGc = null;
-			for(ProjectBean p : projectList){
+			BasLinkGcetp basLinkGcetp = null;
+			BasLinkGcetpPK basLinkGcetpPK = null;
+			for(ProjectBean2 p : projectList){
+				//保存工程表
 				basGc = new BasGc();
 				basGc.setGcId(p.getProjectid());
 				basGc.setCustomerId("0");
@@ -120,6 +128,25 @@ public class WsClient extends WebServiceGatewaySupport{
 				basGc.setStartdate(startDate);
 				basGc.setEnddate(endDate);
 				basGcRepository.save(basGc);
+				
+				//保存工程、企业中间表(BasLinkGcetp)
+				basLinkGcetpPK = new BasLinkGcetpPK();
+				basLinkGcetpPK.setGcId(p.getProjectid());
+				basLinkGcetpPK.setEtpId(p.getConstructionerID());//施工单位
+				basLinkGcetp = new BasLinkGcetp();
+				basLinkGcetp.setId(basLinkGcetpPK);
+				basLinkGcetp.setCustomerId("0");
+				basLinkGcetp.setCreatetime(new Timestamp(System.currentTimeMillis()));
+				basLinkGcetpRepository.save(basLinkGcetp);
+				
+				basLinkGcetpPK = new BasLinkGcetpPK();
+				basLinkGcetpPK.setGcId(p.getProjectid());
+				basLinkGcetpPK.setEtpId(p.getSupervisorID());//监理单位
+				basLinkGcetp = new BasLinkGcetp();
+				basLinkGcetp.setId(basLinkGcetpPK);
+				basLinkGcetp.setCustomerId("0");
+				basLinkGcetp.setCreatetime(new Timestamp(System.currentTimeMillis()));
+				basLinkGcetpRepository.save(basLinkGcetp);
 			}
 			thisPage++;
 		}
@@ -134,8 +161,8 @@ public class WsClient extends WebServiceGatewaySupport{
 		request.setEndDate("2016-06-01");
 		
 		JAXBElement<QueryUnitListResponse> response = (JAXBElement<QueryUnitListResponse>) getWebServiceTemplate()
-				.marshalSendAndReceive("http://218.204.110.136:9000/webservice/platformService",request,
-						new SoapActionCallback("http://218.204.110.136:9000/webservice/QueryUnitList"));
+				.marshalSendAndReceive("http://192.168.3.64:8000/webservice/platformService",request,
+						new SoapActionCallback("http://192.168.3.64:8000/webservice/QueryUnitList"));
 		List<UnitBean> unitBeanlist = response.getValue().getReturn();
 		System.out.println("unitCount:"+unitBeanlist.size());
 		BasEtp basEtp = null;
@@ -169,8 +196,8 @@ public class WsClient extends WebServiceGatewaySupport{
 		request.setEndDate("2016-06-01");
 		
 		JAXBElement<QueryUnitUserListResponse> response = (JAXBElement<QueryUnitUserListResponse>) getWebServiceTemplate()
-				.marshalSendAndReceive("http://218.204.110.136:9000/webservice/platformService",request,
-						new SoapActionCallback("http://218.204.110.136:9000/webservice/queryUnitUserList"));
+				.marshalSendAndReceive("http://192.168.3.64:8000/webservice/platformService",request,
+						new SoapActionCallback("http://192.168.3.64:8000/webservice/queryUnitUserList"));
 		List<UnitUserBean> list = response.getValue().getReturn();
 		System.out.println("unitUserCount:"+list.size());
 		UserAuth ua = null;

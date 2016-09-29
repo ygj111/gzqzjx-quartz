@@ -15,17 +15,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>getUserID complex type的 Java 类。
+ * <p>checkKqByProjectCode complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="getUserID"&gt;
+ * &lt;complexType name="checkKqByProjectCode"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="userName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="passWord" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="projectCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="versionID" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,63 +35,63 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getUserID", propOrder = {
-    "userName",
-    "passWord"
+@XmlType(name = "checkKqByProjectCode", propOrder = {
+    "projectCode",
+    "versionID"
 })
-public class GetUserID {
+public class CheckKqByProjectCode {
 
     @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
-    protected String userName;
+    protected String projectCode;
     @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
-    protected String passWord;
+    protected String versionID;
 
     /**
-     * 获取userName属性的值。
+     * 获取projectCode属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getUserName() {
-        return userName;
+    public String getProjectCode() {
+        return projectCode;
     }
 
     /**
-     * 设置userName属性的值。
+     * 设置projectCode属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setUserName(String value) {
-        this.userName = value;
+    public void setProjectCode(String value) {
+        this.projectCode = value;
     }
 
     /**
-     * 获取passWord属性的值。
+     * 获取versionID属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getPassWord() {
-        return passWord;
+    public String getVersionID() {
+        return versionID;
     }
 
     /**
-     * 设置passWord属性的值。
+     * 设置versionID属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setPassWord(String value) {
-        this.passWord = value;
+    public void setVersionID(String value) {
+        this.versionID = value;
     }
 
 }

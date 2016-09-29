@@ -1,8 +1,8 @@
 //
-// ���ļ����� JavaTM Architecture for XML Binding (JAXB) ����ʵ�� v2.2.11 ��ɵ�
-// ����� <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// �����±���Դģʽʱ, �Դ��ļ��������޸Ķ�����ʧ��
-// ���ʱ��: 2016.09.19 ʱ�� 03:02:38 PM CST 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.11 生成的
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 在重新编译源模式时, 对此文件的所有修改都将丢失。
+// 生成时间: 2016.09.29 时间 03:37:25 PM CST 
 //
 
 
@@ -10,6 +10,7 @@ package com.hhh.webservice.gztd;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -18,9 +19,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>QueryUnitListResponse complex type�� Java �ࡣ
+ * <p>QueryUnitListResponse complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�����ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="QueryUnitListResponse"&gt;

@@ -15,16 +15,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>queryDogKeyByNO complex type的 Java 类。
+ * <p>queryRegisterCheckList complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="queryDogKeyByNO"&gt;
+ * &lt;complexType name="queryRegisterCheckList"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="dogkey" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="beginDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="endDate" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -34,36 +35,63 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "queryDogKeyByNO", propOrder = {
-    "dogkey"
+@XmlType(name = "queryRegisterCheckList", propOrder = {
+    "beginDate",
+    "endDate"
 })
-public class QueryDogKeyByNO {
+public class QueryRegisterCheckList {
 
     @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
-    protected String dogkey;
+    protected String beginDate;
+    @XmlElement(namespace = "http://webservice.system.platform.hhh.com/")
+    protected String endDate;
 
     /**
-     * 获取dogkey属性的值。
+     * 获取beginDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDogkey() {
-        return dogkey;
+    public String getBeginDate() {
+        return beginDate;
     }
 
     /**
-     * 设置dogkey属性的值。
+     * 设置beginDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDogkey(String value) {
-        this.dogkey = value;
+    public void setBeginDate(String value) {
+        this.beginDate = value;
+    }
+
+    /**
+     * 获取endDate属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEndDate() {
+        return endDate;
+    }
+
+    /**
+     * 设置endDate属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEndDate(String value) {
+        this.endDate = value;
     }
 
 }

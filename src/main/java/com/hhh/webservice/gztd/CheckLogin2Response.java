@@ -17,16 +17,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>queryDogKeyByNOResponse complex type的 Java 类。
+ * <p>checkLogin2Response complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="queryDogKeyByNOResponse"&gt;
+ * &lt;complexType name="checkLogin2Response"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="return" type="{http://webservice.system.platform.hhh.com/}dogKeyBean" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="return" type="{http://webservice.system.platform.hhh.com/}userBean" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,13 +36,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "queryDogKeyByNOResponse", propOrder = {
+@XmlType(name = "checkLogin2Response", propOrder = {
     "_return"
 })
-public class QueryDogKeyByNOResponse {
+public class CheckLogin2Response {
 
     @XmlElement(name = "return", namespace = "http://webservice.system.platform.hhh.com/")
-    protected List<DogKeyBean> _return;
+    protected List<UserBean> _return;
 
     /**
      * Gets the value of the return property.
@@ -62,13 +62,13 @@ public class QueryDogKeyByNOResponse {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link DogKeyBean }
+     * {@link UserBean }
      * 
      * 
      */
-    public List<DogKeyBean> getReturn() {
+    public List<UserBean> getReturn() {
         if (_return == null) {
-            _return = new ArrayList<DogKeyBean>();
+            _return = new ArrayList<UserBean>();
         }
         return this._return;
     }

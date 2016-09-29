@@ -1,8 +1,8 @@
 //
-// ´ËÎÄ¼şÊÇÓÉ JavaTM Architecture for XML Binding (JAXB) ÒıÓÃÊµÏÖ v2.2.11 Éú³ÉµÄ
-// Çë·ÃÎÊ <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// ÔÚÖØĞÂ±àÒëÔ´Ä£Ê½Ê±, ¶Ô´ËÎÄ¼şµÄËùÓĞĞŞ¸Ä¶¼½«¶ªÊ§¡£
-// Éú³ÉÊ±¼ä: 2016.09.19 Ê±¼ä 03:02:38 PM CST 
+// æ­¤æ–‡ä»¶æ˜¯ç”± JavaTM Architecture for XML Binding (JAXB) å¼•ç”¨å®ç° v2.2.11 ç”Ÿæˆçš„
+// è¯·è®¿é—® <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// åœ¨é‡æ–°ç¼–è¯‘æºæ¨¡å¼æ—¶, å¯¹æ­¤æ–‡ä»¶çš„æ‰€æœ‰ä¿®æ”¹éƒ½å°†ä¸¢å¤±ã€‚
+// ç”Ÿæˆæ—¶é—´: 2016.09.29 æ—¶é—´ 03:37:25 PM CST 
 //
 
 
@@ -16,9 +16,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>monitorBean complex typeµÄ Java Àà¡£
+ * <p>monitorBean complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="monitorBean"&gt;
@@ -68,7 +68,7 @@ public class MonitorBean {
     protected Integer usertype;
 
     /**
-     * »ñÈ¡deptidÊôĞÔµÄÖµ¡£
+     * è·å–deptidå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class MonitorBean {
     }
 
     /**
-     * ÉèÖÃdeptidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®deptidå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -92,7 +92,7 @@ public class MonitorBean {
     }
 
     /**
-     * »ñÈ¡dogKeyÊôĞÔµÄÖµ¡£
+     * è·å–dogKeyå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -104,7 +104,7 @@ public class MonitorBean {
     }
 
     /**
-     * ÉèÖÃdogKeyÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dogKeyå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -116,7 +116,7 @@ public class MonitorBean {
     }
 
     /**
-     * »ñÈ¡dutyÊôĞÔµÄÖµ¡£
+     * è·å–dutyå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -128,7 +128,7 @@ public class MonitorBean {
     }
 
     /**
-     * ÉèÖÃdutyÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dutyå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -140,7 +140,7 @@ public class MonitorBean {
     }
 
     /**
-     * »ñÈ¡idÊôĞÔµÄÖµ¡£
+     * è·å–idå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -152,7 +152,7 @@ public class MonitorBean {
     }
 
     /**
-     * ÉèÖÃidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®idå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -164,7 +164,7 @@ public class MonitorBean {
     }
 
     /**
-     * »ñÈ¡passwordÊôĞÔµÄÖµ¡£
+     * è·å–passwordå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -176,7 +176,7 @@ public class MonitorBean {
     }
 
     /**
-     * ÉèÖÃpasswordÊôĞÔµÄÖµ¡£
+     * è®¾ç½®passwordå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -188,7 +188,7 @@ public class MonitorBean {
     }
 
     /**
-     * »ñÈ¡updatedateÊôĞÔµÄÖµ¡£
+     * è·å–updatedateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -200,7 +200,7 @@ public class MonitorBean {
     }
 
     /**
-     * ÉèÖÃupdatedateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®updatedateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -212,7 +212,7 @@ public class MonitorBean {
     }
 
     /**
-     * »ñÈ¡useridÊôĞÔµÄÖµ¡£
+     * è·å–useridå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -224,7 +224,7 @@ public class MonitorBean {
     }
 
     /**
-     * ÉèÖÃuseridÊôĞÔµÄÖµ¡£
+     * è®¾ç½®useridå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -236,7 +236,7 @@ public class MonitorBean {
     }
 
     /**
-     * »ñÈ¡usernameÊôĞÔµÄÖµ¡£
+     * è·å–usernameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -248,7 +248,7 @@ public class MonitorBean {
     }
 
     /**
-     * ÉèÖÃusernameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®usernameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -260,7 +260,7 @@ public class MonitorBean {
     }
 
     /**
-     * »ñÈ¡usertypeÊôĞÔµÄÖµ¡£
+     * è·å–usertypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -272,7 +272,7 @@ public class MonitorBean {
     }
 
     /**
-     * ÉèÖÃusertypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®usertypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

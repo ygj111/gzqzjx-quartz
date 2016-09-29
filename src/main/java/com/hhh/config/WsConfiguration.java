@@ -19,7 +19,7 @@ public class WsConfiguration {
 	@Bean
 	public WsClient wsClient(Jaxb2Marshaller marshaller) {
 		WsClient client = new WsClient();
-		client.setDefaultUri("http://218.204.110.136:9000/webservice/platformService");
+		client.setDefaultUri("http://192.168.3.64:8000/webservice/platformService");
 		client.setMarshaller(marshaller);
 		client.setUnmarshaller(marshaller);
 		return client;

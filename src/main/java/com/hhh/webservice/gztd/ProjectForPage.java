@@ -1,8 +1,8 @@
 //
-// ´ËÎÄ¼şÊÇÓÉ JavaTM Architecture for XML Binding (JAXB) ÒıÓÃÊµÏÖ v2.2.11 Éú³ÉµÄ
-// Çë·ÃÎÊ <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
-// ÔÚÖØĞÂ±àÒëÔ´Ä£Ê½Ê±, ¶Ô´ËÎÄ¼şµÄËùÓĞĞŞ¸Ä¶¼½«¶ªÊ§¡£
-// Éú³ÉÊ±¼ä: 2016.09.19 Ê±¼ä 03:02:38 PM CST 
+// æ­¤æ–‡ä»¶æ˜¯ç”± JavaTM Architecture for XML Binding (JAXB) å¼•ç”¨å®ç° v2.2.11 ç”Ÿæˆçš„
+// è¯·è®¿é—® <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// åœ¨é‡æ–°ç¼–è¯‘æºæ¨¡å¼æ—¶, å¯¹æ­¤æ–‡ä»¶çš„æ‰€æœ‰ä¿®æ”¹éƒ½å°†ä¸¢å¤±ã€‚
+// ç”Ÿæˆæ—¶é—´: 2016.09.29 æ—¶é—´ 03:37:25 PM CST 
 //
 
 
@@ -17,9 +17,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>projectForPage complex typeµÄ Java Àà¡£
+ * <p>projectForPage complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="projectForPage"&gt;
@@ -48,7 +48,7 @@ public class ProjectForPage {
     protected List<ProjectBean> projectBean;
 
     /**
-     * »ñÈ¡pageCountÊôĞÔµÄÖµ¡£
+     * è·å–pageCountå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getPageCount() {
@@ -56,7 +56,7 @@ public class ProjectForPage {
     }
 
     /**
-     * ÉèÖÃpageCountÊôĞÔµÄÖµ¡£
+     * è®¾ç½®pageCountå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setPageCount(int value) {

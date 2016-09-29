@@ -106,7 +106,7 @@
 					<generatePackage>com.hhh.wsdl</generatePackage>
 					<schemas>
 						<schema>
-							<url>http://218.204.110.136:9000/webservice/platformService?wsdl</url>
+							<url>http://192.168.3.64:8000/webservice/platformService?wsdl</url>
 						</schema>
 					</schemas>
 				</configuration>

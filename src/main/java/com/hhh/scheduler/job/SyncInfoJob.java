@@ -17,8 +17,8 @@ public class SyncInfoJob implements Job{
 	public void execute(JobExecutionContext context) throws JobExecutionException {
 			System.out.println("-----------------从监督系统同步信息开始----------------");
 			client.syncProjectInfo();
-			client.syncUnitInfo();
-			client.syncUnitUserInfo();
+//			client.syncUnitInfo();
+//			client.syncUnitUserInfo();
 			System.out.println("-----------------从监督系统同步信息结束----------------");
 	}
 
